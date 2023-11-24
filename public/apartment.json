@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "title": "BNC Tower ",
+      "image": " https://i.ibb.co/n36pCqV/1606647488f-Rofo-m.jpg ",
+      "address": " Gulshan",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 2,
+      "title": "Lake View ",
+      "image": " https://i.ibb.co/m0jhSCP/1609673182-WFQ5s-m.jpg ",
+      "address": " Mirpur",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 3,
+      "title": "Lake Castle ",
+      "image": " https://i.ibb.co/DM1m8vN/1610283305j-L76o-s.jpg ",
+      "address": " Baridara",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 4,
+      "title": "Sodhasodon Tower ",
+      "image": " https://i.ibb.co/C1xqGK4/1624871359bnqef-m-1.jpg",
+      "address": " Gulshan",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 5,
+      "title": "Lake Park ",
+      "image": "https://i.ibb.co/WFQG7b6/1624873355-JBQJw-m-1.jpg",
+      "address": " Gulshan",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 6,
+      "title": "Chowdhury villa ",
+      "image": " https://i.ibb.co/DKJ8t5X/1627455889x-MYy-K-m-3.jpg",
+      "address": " Gulshan",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 7,
+      "title": "shenadh ",
+      "image": " https://i.ibb.co/dQcDT7t/1627464235-HUJ42-m-2.jpg",
+      "address": " Gulshan",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 8,
+      "title": "Shongsshaptak ",
+      "image": " https://i.ibb.co/xLGngfW/1628189716u-SPNF-m.jpg ",
+      "address": " Gulshan",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    },
+    {
+      "id": 9,
+      "title": "Jhankar Tower ",
+      "image": " https://i.ibb.co/m9GR7yq/16018776919-IWx-W-m-2.jpg",
+      "address": " Gulshan",
+      "floor": 12,
+      "Block": "A",
+      "size": 3400
+    }
+  ]
