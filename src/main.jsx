@@ -10,6 +10,7 @@ import Home from './components/Home/Home';
 import Login from './components/SharedPage/Login/Login';
 import AuthProvider from './components/Providers/AuthProvider';
 import Apartment from './components/Page/NavBar/Apartment/Apartment';
+import SignUp from './components/SharedPage/Login/SignUp/SignUp';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: 'login',
         element: <Login></Login>
+      },
+      {
+        path:'signUp',
+        element: <SignUp></SignUp>,
       },
       {
         path: 'apartment',

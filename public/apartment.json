@@ -3,55 +3,67 @@
       "id": 1,
       "title": "BNC Tower ",
       "image": " https://i.ibb.co/n36pCqV/1606647488f-Rofo-m.jpg ",
-      "address": " Gulshan",
-      "floor": 12,
-      "Block": "A",
-      "size": 3400
+      "address":"mirpur",
+      "floor":12,
+      "apartNumber":9,
+      "Block":"A",
+      "size": 1400,
+      "rent":20000
     },
     {
       "id": 2,
       "title": "Lake View ",
       "image": " https://i.ibb.co/m0jhSCP/1609673182-WFQ5s-m.jpg ",
-      "address": " Mirpur",
-      "floor": 12,
+      "address": " mohammadpur",
+      "floor": 10,
+      "apartNumber":7,
       "Block": "A",
-      "size": 3400
+      "size": 1700,
+      "rent":50000
     },
     {
       "id": 3,
       "title": "Lake Castle ",
       "image": " https://i.ibb.co/DM1m8vN/1610283305j-L76o-s.jpg ",
       "address": " Baridara",
-      "floor": 12,
+      "floor": 11,
+      "apartNumber":3,
       "Block": "A",
-      "size": 3400
+      "size": 1900,
+      "rent":70000
     },
     {
       "id": 4,
       "title": "Sodhasodon Tower ",
       "image": " https://i.ibb.co/C1xqGK4/1624871359bnqef-m-1.jpg",
-      "address": " Gulshan",
-      "floor": 12,
+      "address": " uttara",
+      "floor": 16,
+      "apartNumber":2,
       "Block": "A",
-      "size": 3400
+      "size": 1500,
+      "rent":90000
     },
     {
       "id": 5,
       "title": "Lake Park ",
       "image": "https://i.ibb.co/WFQG7b6/1624873355-JBQJw-m-1.jpg",
-      "address": " Gulshan",
+      "address": " banani",
       "floor": 12,
+      "apartNumber":9,
       "Block": "A",
-      "size": 3400
+      "size": 1300,
+      "rent":110000
     },
     {
       "id": 6,
       "title": "Chowdhury villa ",
       "image": " https://i.ibb.co/DKJ8t5X/1627455889x-MYy-K-m-3.jpg",
-      "address": " Gulshan",
+      "address": "zigatola",
       "floor": 12,
+      "apartNumber":5,
       "Block": "A",
-      "size": 3400
+      "size": 800,
+      "rent":13000
     },
     {
       "id": 7,
@@ -59,25 +71,31 @@
       "image": " https://i.ibb.co/dQcDT7t/1627464235-HUJ42-m-2.jpg",
       "address": " Gulshan",
       "floor": 12,
+      "apartNumber":4,
       "Block": "A",
-      "size": 3400
+      "size": 3400,
+      "rent":160000
     },
     {
       "id": 8,
       "title": "Shongsshaptak ",
       "image": " https://i.ibb.co/xLGngfW/1628189716u-SPNF-m.jpg ",
-      "address": " Gulshan",
+      "address": " kalabagan",
       "floor": 12,
+      "apartNumber":9,
       "Block": "A",
-      "size": 3400
+      "size": 1700,
+      "rent":20000
     },
     {
       "id": 9,
       "title": "Jhankar Tower ",
       "image": " https://i.ibb.co/m9GR7yq/16018776919-IWx-W-m-2.jpg",
-      "address": " Gulshan",
+      "address": " Dhanmondi",
       "floor": 12,
+      "apartNumber":9,
       "Block": "A",
-      "size": 3400
+      "size":1500,
+      "rent": 34000
     }
   ]

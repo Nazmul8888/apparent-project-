@@ -1,20 +1,41 @@
 import { Link } from 'react-router-dom';
 import logoImg from '../../../assets/banner/logo.jpeg'
+// import { useContext } from '../../Providers/AuthProvider';
+// import { AuthContext } from '../../Providers/AuthProvider';
+import useAuth from '../../Hooks/useAuth/useAuth';
 
 const Navbar = () => {
+    const {user,logOut} = useAuth();
+
+    const handelLogOut = ()=>{
+        logOut()
+        .then(()=>{})
+        .catch(error=>console.log(error))
+
+    }
     const navLinks = <>
         <li><Link className='font-extrabold text-purple-700 text-1xl' to='/'>CREDENCE</Link></li>
         <li><Link className='font-extrabold text-green-700 text-1xl' 
         to='/apartment'>APARTMENT</Link></li>
-        {/* <li><Link to='/login'>LOGIN</Link></li> */}
+       
 
     </>
     const dropLinks = <>
 
         <li><Link to='profile'>Profile</Link></li>
         <li><Link to='dashboard'>Dashboard</Link></li>
-        <li><Link to='login'>Login</Link></li>
+        
         <li><Link to='signUp'>Sign Up</Link></li>
+
+
+        {
+            user ? <>
+            <button onClick={handelLogOut} className="btn btn-ghost">Log Out</button>
+            </> :  <>
+            <li><Link to='login'>Login</Link></li>
+
+            </>
+        }
     </>
     return (
         <div className="navbar bg-base-100">

@@ -93,7 +93,7 @@ const Login = () => {
                             </div>
                         </form>
                         
-                        <p><small>New Here? <Link to="/signUp">Create an account</Link> </small></p>
+                        <p className=" text-center"><small>New Here please ? <Link className=" text-lime-500" to="/signUp">Account Create</Link> </small></p>
                         {/* <SocialLogin></SocialLogin> */}
                     </div>
 
