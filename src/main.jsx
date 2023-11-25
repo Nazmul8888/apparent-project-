@@ -11,6 +11,8 @@ import Login from './components/SharedPage/Login/Login';
 import AuthProvider from './components/Providers/AuthProvider';
 import Apartment from './components/Page/NavBar/Apartment/Apartment';
 import SignUp from './components/SharedPage/Login/SignUp/SignUp';
+import Dashboard from './components/Layout/Dashboard';
+import Profile from './components/SharedPage/Login/Dashboard/Profile/Profile';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +36,16 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path:'dashboard',
+    element: <Dashboard></Dashboard>,
+    children:[
+      {
+        path:'profile',
+        element: <Profile></Profile>
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

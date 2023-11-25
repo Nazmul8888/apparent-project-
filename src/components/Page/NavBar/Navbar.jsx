@@ -3,6 +3,7 @@ import logoImg from '../../../assets/banner/logo.jpeg'
 // import { useContext } from '../../Providers/AuthProvider';
 // import { AuthContext } from '../../Providers/AuthProvider';
 import useAuth from '../../Hooks/useAuth/useAuth';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
     const {user,logOut} = useAuth();
@@ -26,6 +27,14 @@ const Navbar = () => {
         <li><Link to='dashboard'>Dashboard</Link></li>
         
         <li><Link to='signUp'>Sign Up</Link></li>
+        <li>
+            <Link to='/dashboard/profile'>
+            <button className="btn">
+                <FaShoppingCart className="mr-2"></FaShoppingCart>
+                <div className="badge badge-secondary"></div>
+                </button>
+            </Link>
+        </li>
 
 
         {
