@@ -26,7 +26,7 @@ const SignUp = () => {
                             email: data.email
                         }
 
-                        axios.post('http://localhost:5000/users', userInfo)
+                        axios.post('http://localhost:5000/apartment', userInfo)
                             .then(res => {
                                 if (res.data.insertedId) {
                                     console.log('user added database')

@@ -12,7 +12,7 @@ import AuthProvider from './components/Providers/AuthProvider';
 import Apartment from './components/Page/NavBar/Apartment/Apartment';
 import SignUp from './components/SharedPage/Login/SignUp/SignUp';
 import Dashboard from './components/Layout/Dashboard';
-import Profile from './components/SharedPage/Login/Dashboard/Profile/Profile';
+import Agreement from './components/SharedPage/Login/Dashboard/Agreement/Agreement';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,13 +36,14 @@ const router = createBrowserRouter([
       }
     ]
   },
+  // normal user side
   {
     path:'dashboard',
     element: <Dashboard></Dashboard>,
     children:[
       {
-        path:'profile',
-        element: <Profile></Profile>
+        path:'agreement',
+        element: <Agreement></Agreement>
       }
     ]
   }
