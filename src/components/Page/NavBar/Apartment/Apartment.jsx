@@ -1,6 +1,6 @@
 import {useEffect,  useState } from "react";
-import ApartmentItem from "../../ApartmentItem/ApartmentItem";
 import ApartmentDetails from "./ApartmentDetails";
+
 
 const Apartment = () => {
     const [newApartment, setNewApartment] = useState([]);
@@ -12,11 +12,17 @@ const Apartment = () => {
         
     },[])
     return (
+        <div>
         <div className="grid grid-cols-3 gap-5">
          {
                 newApartment.map(item=> <ApartmentDetails key={newApartment._id} item={item}></ApartmentDetails>)
             }
         </div>
+        {/* <Link to={`/apartment/${title}`}>
+           <button className=" btn btn-outline border-0 border-b-4 mt-4">Order Now</button>
+           </Link> */}
+        </div>
+
     );
 };
 

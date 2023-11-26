@@ -13,6 +13,13 @@ import Apartment from './components/Page/NavBar/Apartment/Apartment';
 import SignUp from './components/SharedPage/Login/SignUp/SignUp';
 import Dashboard from './components/Layout/Dashboard';
 import Agreement from './components/SharedPage/Login/Dashboard/Agreement/Agreement';
+import {
+  QueryClient,
+  QueryClientProvider,
+  
+} from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,9 +59,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
    <AuthProvider>
+   <QueryClientProvider client={queryClient}>
    <div className='max-w-screen-xl mx-auto'>
     <RouterProvider router={router} />
     </div>
+    </QueryClientProvider>
    </AuthProvider>
    
   </React.StrictMode>,
