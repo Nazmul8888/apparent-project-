@@ -7,7 +7,7 @@ export const AuthContext = createContext(null);
  const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
-    const [user, setUser]= useState(null);
+    const [user, setUser]= useState({});
     const [loading, setLoading]= useState(true);
     const googleProvider = new GoogleAuthProvider();
     // const axiosPublic = useAxiosPublic();
@@ -39,7 +39,7 @@ const AuthProvider = ({children}) => {
     
 
     useEffect(()=>{
-        const unSubscribe = onAuthStateChanged(auth, currentUser=>{
+         onAuthStateChanged(auth, currentUser=>{
             setUser(currentUser);
             // if(currentUser){
                 
@@ -64,11 +64,13 @@ const AuthProvider = ({children}) => {
             // setLoading(false);
         })
 
-        return()=>{
-            return unSubscribe();
-        }
+        // return()=>{
+            // return unSubscribe();
+        // }
+
              
     },[])
+    console.log(user);
 
 
     const authInfo = {

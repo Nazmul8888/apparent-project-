@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+// import agreementCart from "../../AgreementCart/agreementCart";
 
 
 
@@ -12,6 +13,7 @@ const ApartmentDetails = ({item}) => {
     const location = useLocation();
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
+    // const [, refetch] = agreementCart();
 
     const handelAddAgreement= () =>{
         if(user && user.email){
@@ -27,7 +29,7 @@ const ApartmentDetails = ({item}) => {
             }
             axiosSecure.post('/agreements',cartItem)
             .then(res=>{
-                console.log(res.data)
+             
                 if(res.data.insertedId){
                     Swal.fire({
                         position: "top-end",
@@ -36,6 +38,7 @@ const ApartmentDetails = ({item}) => {
                         showConfirmButton: false,
                         timer: 1500
                       });
+                    //   refetch();
                 }
             })
         }
@@ -68,7 +71,7 @@ const ApartmentDetails = ({item}) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Size: {size}</p>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Rent: {rent}</p>
       
-           <button onClick={handelAddAgreement(item)} className=" btn btn-outline border-0 border-b-4 mt-4">Agreement</button>
+           <button onClick={handelAddAgreement} className=" btn btn-outline border-0 border-b-4 mt-4">Agreement</button>
            
         
         

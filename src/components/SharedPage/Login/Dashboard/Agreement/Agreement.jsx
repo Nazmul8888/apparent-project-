@@ -1,37 +1,19 @@
+import agreementCart from "../../../../Page/AgreementCart/agreementCart";
 
 
 const Agreement = () => {
+ const [agreements] = agreementCart();
+  const totalPrice = agreements.reduce((total, item)=> total + item.price, 0)
     return (
         <div>
-            <div className="overflow-x-auto">
-  <table className="table table-xs">
-    <thead>
-      <tr>
-        <th></th> 
-        <th>Name</th> 
-        <th>Job</th> 
-        <th>company</th> 
-        <th>location</th> 
-        <th>Last Login</th> 
-        <th>Favorite Color</th>
-      </tr>
-    </thead> 
-    <tbody>
-      <tr>
-        <th>1</th> 
-        <td>Cy Ganderton</td> 
-        <td>Quality Control Specialist</td> 
-        <td>Littel, Schaden and Vandervort</td> 
-        <td>Canada</td> 
-        <td>12/16/2020</td> 
-        <td>Blue</td>
-      </tr>
-    </tbody> 
-    <tfoot>
-    </tfoot>
-  </table>
-</div>
-        </div>
+
+           <div>
+            <h2 className="text-4xl ">items: {agreements.length}</h2>
+            <h2 className="text-4xl ">Total Price: {totalPrice}</h2>
+            <button className="btn btn-primary">Pay Now</button>
+            </div> 
+    </div>
+        
     );
 };
 

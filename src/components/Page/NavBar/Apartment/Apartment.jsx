@@ -18,9 +18,7 @@ const Apartment = () => {
                 newApartment.map(item=> <ApartmentDetails key={newApartment._id} item={item}></ApartmentDetails>)
             }
         </div>
-        {/* <Link to={`/apartment/${title}`}>
-           <button className=" btn btn-outline border-0 border-b-4 mt-4">Order Now</button>
-           </Link> */}
+       
         </div>
 
     );
