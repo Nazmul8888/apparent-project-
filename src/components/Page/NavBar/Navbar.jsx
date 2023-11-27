@@ -4,12 +4,13 @@ import logoImg from '../../../assets/banner/logo.jpeg'
 // import { AuthContext } from '../../Providers/AuthProvider';
 import useAuth from '../../Hooks/useAuth/useAuth';
 import { FaGripVertical } from "react-icons/fa";
-import agreementCart from '../AgreementCart/agreementCart';
+
+import useAgreementCart from '../AgreementCart/AgreementCart';
 
 
 const Navbar = () => {
     const {user,logOut} = useAuth();
-    const [,agreements] = agreementCart();
+    const [,agreements] = useAgreementCart();
    console.log(agreements?.length);
     const handelLogOut = ()=>{
         logOut()

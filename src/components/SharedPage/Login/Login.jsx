@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import {loadCaptchaEnginge,LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 
 const Login = () => {
@@ -96,11 +97,12 @@ const Login = () => {
                         </form>
                         
                         <p className=" text-center"><small>New Here please ? <Link className=" text-lime-500" to="/signUp">Account Create</Link> </small></p>
-                        {/* <SocialLogin></SocialLogin> */}
+                        <SocialLogin></SocialLogin>
                     </div>
 
                
                 </div>
+                
                 
             </div>
         </>
