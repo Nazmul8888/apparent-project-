@@ -5,14 +5,14 @@ const useAgreement = () => {
     const [agreement, setAgreement] = useState([])
 
     const [loading, setLoading] = useState(true);
-
+   console.log(agreement);
     useEffect(() => {
         fetch('http://localhost:5000/apartment')
 
             .then(res => res.json())
             .then(data => {
                 setAgreement(data);
-                setLoading(false);
+                // setLoading(false);
             });
     }, [])
 

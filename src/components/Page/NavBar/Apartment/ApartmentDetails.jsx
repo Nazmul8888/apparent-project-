@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-// import agreementCart from "../../AgreementCart/agreementCart";
+import agreementCart from "../../AgreementCart/agreementCart";
 
 
 
@@ -13,7 +13,7 @@ const ApartmentDetails = ({item}) => {
     const location = useLocation();
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
-    // const [, refetch] = agreementCart();
+    const [, refetch] = agreementCart();
 
     const handelAddAgreement= () =>{
         if(user && user.email){
@@ -38,7 +38,7 @@ const ApartmentDetails = ({item}) => {
                         showConfirmButton: false,
                         timer: 1500
                       });
-                    //   refetch();
+                      refetch();
                 }
             })
         }

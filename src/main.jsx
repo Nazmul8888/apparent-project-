@@ -21,6 +21,7 @@ import {
 import AllUsers from './components/Dashboard/AllUsers/AllUsers';
 import ManageMembers from './components/SharedPage/Login/Dashboard/ManageMembers';
 import AdminRoute from './components/Hooks/AdminRoute';
+import PaymentHistory from './components/Dashboard/Payment/PaymentHistory';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -55,7 +56,13 @@ const router = createBrowserRouter([
         path:'agreement',
         element: <Agreement></Agreement>
       },
+      {
+        path:'paymentHistory',
+        element: <PaymentHistory></PaymentHistory>
+
+      },
       // admin side
+      
       {
         path:'manageMembers',
         element: <AdminRoute><ManageMembers></ManageMembers></AdminRoute>

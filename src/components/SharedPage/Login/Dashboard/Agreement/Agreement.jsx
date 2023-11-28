@@ -4,15 +4,15 @@ import useAgreementCart from "../../../../Page/AgreementCart/AgreementCart";
 
 const Agreement = () => {
 
-const [,agreements] = useAgreementCart()
-  const totalPrice = agreements.reduce((total, item)=> total + item.rent, 0)
-  console.log(agreements);
+const [,agreements] = useAgreementCart();
+  const totalRent = agreements.reduce((total, item)=> total + item.rent, 0)
+ 
     return (
         <div className="bg-red-100  text-center">
 
            <div className="flex justify-evenly">
             <h2 className="text-4xl ">Items: {agreements.length}</h2>
-            <h2 className="text-4xl  ">Total Rent: {totalPrice}</h2>
+            <h2 className="text-4xl  ">Total Rent: {totalRent}</h2>
             <button className="btn btn-primary">Pay Now</button>
             </div> 
 

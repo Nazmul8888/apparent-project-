@@ -15,7 +15,7 @@ const ApartmentCard = () => {
     },[])
     return (
         <div>
-            <h1 className='font-semibold text-purple-700 text-1xl text-center'>WE MAKE THE ORDINARY...EXTRAORDINARY !</h1>
+            <h1 className='font-bold text-red-600 text-4xl text-center'>WE MAKE THE ORDINARY...EXTRAORDINARY !</h1>
         <div className="grid grid-cols-3 gap-5">
             {
                 apartment.map(item=> <ApartmentItem key={apartment._id} item={item}></ApartmentItem>)
