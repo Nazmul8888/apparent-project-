@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import useAxiosPublic from "../../../Hooks/useAuth/useAxiosPublic";
 import axios from "axios";
 import Swal from "sweetalert2";
+// import useAxiosPublic from "../../../Hooks/useAuth/useAxiosPublic";
 
 
 const SignUp = () => {
@@ -14,6 +15,7 @@ const SignUp = () => {
 
     const onSubmit = data => {
         // const axiosPublic = UseAxiosPublic();
+        // const axiosPublic = useAxiosPublic();
         // const axiosPublic = useAxiosPublic();
         createUser(data.email, data.password)
             .then(result => {
@@ -26,7 +28,7 @@ const SignUp = () => {
                             email: data.email
                         }
 
-                        axios.post('http://localhost:5000/apartment', userInfo)
+                        axios.post('http://localhost:5000/users', userInfo)
                             .then(res => {
                                 if (res.data.insertedId) {
                                     console.log('user added database')

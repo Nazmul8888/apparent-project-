@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ApartmentItem from "../ApartmentItem/ApartmentItem";
-import { Link } from "react-router-dom";
+
 
 
 const ApartmentCard = () => {

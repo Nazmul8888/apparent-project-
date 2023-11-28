@@ -18,6 +18,9 @@ import {
   QueryClientProvider,
   
 } from '@tanstack/react-query'
+import AllUsers from './components/Dashboard/AllUsers/AllUsers';
+import ManageMembers from './components/SharedPage/Login/Dashboard/ManageMembers';
+import AdminRoute from './components/Hooks/AdminRoute';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -51,6 +54,16 @@ const router = createBrowserRouter([
       {
         path:'agreement',
         element: <Agreement></Agreement>
+      },
+      // admin side
+      {
+        path:'manageMembers',
+        element: <AdminRoute><ManageMembers></ManageMembers></AdminRoute>
+      },
+      {
+        path: 'users',
+        element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+
       }
     ]
   }

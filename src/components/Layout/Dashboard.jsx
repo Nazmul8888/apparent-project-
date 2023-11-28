@@ -5,14 +5,17 @@ import { MdPayments } from "react-icons/md";
 import { MdWorkHistory } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { FaUsersBetweenLines } from "react-icons/fa6";
 import useAgreementCart from "../Page/AgreementCart/AgreementCart";
+import useAdmin from "../Hooks/useAdmin";
+
 
 const Dashboard = () => {
     const [agreement] = useAgreementCart();
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
     return (
         <div className="flex">
-            <div className="w-64 min-h-screen bg-green-500">
+            <div className="w-64 h-[1000px] bg-green-500">
                 <ul className="apartment p-4">
                     {
                         isAdmin ? <>
@@ -31,6 +34,10 @@ const Dashboard = () => {
                     <li><NavLink to='/dashboard/agreementRequest'>
                         <FaNewspaper />
                         Agreement Request</NavLink>
+                    </li>
+                    <li><NavLink to='/dashboard/users'>
+                    <FaUsersBetweenLines />
+                       All Users</NavLink>
                     </li>
                         </>
                         :
@@ -54,9 +61,9 @@ const Dashboard = () => {
                         </>
                     }
                     {/* shared nav links */}
-                    <div className="divider divider-horizontal"></div>
+                    
 
-
+                    <div className="divider"></div>
                     <li><NavLink to='/'>
                         <FaHome />
                         CREDENCE</NavLink>
