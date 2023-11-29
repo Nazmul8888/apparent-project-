@@ -1,10 +1,11 @@
 import {CardElement, useElements, useStripe} from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
-import useAxiosSecure from "../../../Hoks/Axios/useAxiosSecure";
-import useAuth from "../../../../Provider/Hoks/useAuth";
+
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-import useAgreement from "../../Hooks/useAgreement/useAgreement";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import useAuth from "../../Hooks/useAuth/useAuth";
+import useAgreementCart from "../../Page/AgreementCart/AgreementCart";
 
 const CheckOutForm = () => {
     const [error, setError] = useState();
@@ -13,8 +14,8 @@ const CheckOutForm = () => {
     const {user} = useAuth();
     const stripe = useStripe();
     const elements = useElements();
-    const axiosSecure = useAxiosSecure();
-    const [agreements, refetch] = useAgreement();
+   const axiosSecure = useAxiosSecure();
+   const [,agreements] = useAgreementCart();
     const navigate = useNavigate();
     const totalRent = agreements.reduce((total, item)=> total + item.rent, 0)
 
@@ -31,10 +32,10 @@ const CheckOutForm = () => {
       }
     },[axiosSecure, totalRent])
 
-
+  
     const handleSubmit = async (event)=>{
         event.preventDefault();
-    
+   
         if (!stripe || !elements) {
             // Stripe.js has not loaded yet. Make sure to disable
             // form submission until Stripe.js has loaded.
@@ -110,25 +111,25 @@ const CheckOutForm = () => {
         }
 
     return (
-       <form onSubmit={handleSubmit}>
+       <form className="py-20 p-10 ml-20 gap-10 bg-[#FFC5C5] " onSubmit={handleSubmit}>
         <CardElement
         options={{
           style: {
             base: {
               fontSize: '16px',
-              color: '#29ADB2',
+              color: '#B15EFF',
               '::placeholder': {
-                color: '#FF5B22',
+                color: '#b22929',
               },
             },
             invalid: {
-              color: '#29ADB2',
+              color: '#b22929',
             },
           },
         }}
       />
-      <button className="btn btn-info bg-red-700 text-white" type="submit" disabled={!stripe}>
-        Pay
+      <button className="btn btn-info bg-[#F86F03]  text-white " type="submit" >
+        PAY NOW
       </button>
       <p className="text-red-600">{error}</p>
       {transactionId && <p className="text-green-600">your transaction id: {transactionId}</p>}

@@ -22,6 +22,7 @@ import AllUsers from './components/Dashboard/AllUsers/AllUsers';
 import ManageMembers from './components/SharedPage/Login/Dashboard/ManageMembers';
 import AdminRoute from './components/Hooks/AdminRoute';
 import PaymentHistory from './components/Dashboard/Payment/PaymentHistory';
+import Payment from './components/Dashboard/Payment/Payment';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path:'agreement',
         element: <Agreement></Agreement>
+      },
+      {
+        path: 'makePayment',
+        element: <Payment></Payment>
       },
       {
         path:'paymentHistory',

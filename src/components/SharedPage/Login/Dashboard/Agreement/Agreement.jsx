@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useAgreementCart from "../../../../Page/AgreementCart/AgreementCart";
 
 
@@ -10,11 +11,20 @@ const [,agreements] = useAgreementCart();
     return (
         <div className="bg-red-100  text-center">
 
-           <div className="flex justify-evenly">
+           {/* <div className="flex justify-evenly">
             <h2 className="text-4xl ">Items: {agreements.length}</h2>
             <h2 className="text-4xl  ">Total Rent: {totalRent}</h2>
             <button className="btn btn-primary">Pay Now</button>
-            </div> 
+            </div>  */}
+            <div className=' flex justify-evenly'>
+            <h2 className="text 4xl">Items:{agreements.length}</h2>
+            <h2 className="text 4xl"> Total Price: $ {totalRent}</h2>
+            { agreements.length ? <Link to="/dashboard/makePayment">
+            <button className='btn btn-primary'>Pay Now</button>
+            </Link>
+            :
+            <button className='btn btn-primary'>Pay Now</button>}
+          </div>
 
             <div className="overflow-x-auto">
   <table className="table">

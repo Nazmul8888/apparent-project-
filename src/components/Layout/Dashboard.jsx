@@ -15,7 +15,7 @@ const Dashboard = () => {
     const [isAdmin] = useAdmin();
     return (
         <div className="flex">
-            <div className="w-64 h-[1000px] bg-green-500">
+            <div className="w-80 h-[800px]  bg-pink-600 font-bold ">
                 <ul className="apartment p-4">
                     {
                         isAdmin ? <>
