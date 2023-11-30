@@ -6,7 +6,7 @@ const Apartment = () => {
     const [newApartment, setNewApartment] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/apartment')
+        fetch('https://b8a12-server-side-nazmul8888.vercel.app/apartment')
         .then(res=> res.json())
         .then(data=> setNewApartment(data))
         

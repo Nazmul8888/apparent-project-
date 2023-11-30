@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const MakeAnnouncement = () => {
     return (
         <div className="flex ">
-            <button className="btn ">Announcement</button>
+            <button className="btn bg-lime-500 ">Announcement</button>
               <Marquee pauseOnHover ={true} speed={100}>
                  <Link className="mr-12" to='/'> I can be a React component, multiple React components, or just some text......</Link>
                  <Link className="mr-12" to='/'> I can be a React component, multiple React components, or just some text......</Link>

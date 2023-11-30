@@ -2,7 +2,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth/useAuth";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
-import agreementCart from "../../AgreementCart/agreementCart";
+import useAgreement from "../../../Hooks/useAgreement/useAgreement";
+
 
 
 
@@ -13,7 +14,7 @@ const ApartmentDetails = ({item}) => {
     const location = useLocation();
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
-    const [, refetch] = agreementCart();
+    const [, refetch] = useAgreement();
 
     const handelAddAgreement= () =>{
         if(user && user.email){

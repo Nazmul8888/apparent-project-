@@ -15,7 +15,7 @@ const CheckOutForm = () => {
     const stripe = useStripe();
     const elements = useElements();
    const axiosSecure = useAxiosSecure();
-   const [,agreements] = useAgreementCart();
+   const [,agreements, refetch] = useAgreementCart();
     const navigate = useNavigate();
     const totalRent = agreements.reduce((total, item)=> total + item.rent, 0)
 
@@ -85,7 +85,7 @@ const CheckOutForm = () => {
 
               const payment = {
                 email: user.email,
-                price: totalRent,
+                rent: totalRent,
                 transactionId: paymentIntent.id,
                 date: new Date(),
                 cartIds: agreements.map(item => item._id),

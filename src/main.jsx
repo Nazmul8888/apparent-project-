@@ -23,6 +23,8 @@ import ManageMembers from './components/SharedPage/Login/Dashboard/ManageMembers
 import AdminRoute from './components/Hooks/AdminRoute';
 import PaymentHistory from './components/Dashboard/Payment/PaymentHistory';
 import Payment from './components/Dashboard/Payment/Payment';
+import MakeAnnouncement from './components/Dashboard/MakeAnnouncement';
+import AdminProfile from './components/AdminProfile/AdminProfile';
 
 const queryClient = new QueryClient()
 const router = createBrowserRouter([
@@ -67,6 +69,10 @@ const router = createBrowserRouter([
 
       },
       // admin side
+      {
+        path:'adminProfile',
+        element: <AdminProfile></AdminProfile>
+      },
       
       {
         path:'manageMembers',
@@ -76,6 +82,10 @@ const router = createBrowserRouter([
         path: 'users',
         element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
 
+      },
+      {
+        path: 'makeAnnouncement',
+        element: <MakeAnnouncement></MakeAnnouncement>
       }
     ]
   }
